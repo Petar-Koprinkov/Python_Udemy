@@ -46,3 +46,4 @@ while not end_of_game:
 
     print(stages[lives])
     print(display)
+
