@@ -1,4 +1,5 @@
 import random
+import time
 
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 user_set = []
@@ -22,6 +23,7 @@ if 11 in user_set and len(user_set) == 2 and user_score > 21:
 print(f'Your cards are {user_set[0]} and {user_set[1]}')
 print(f'Computer card is {computer_set[0]}\n')
 
+time.sleep(2)
 while len(user_set) < 3 and input("Do you want to draw cards. Type 'y' or 'n': ").lower() == 'y':
     draw_card(user_set)
 
@@ -43,6 +45,7 @@ u_numbers = []
 for number in user_set:
     u_numbers.append(str(number))
 
+time.sleep(2)
 print(f'\nYour cards are: ' + ', '.join(u_numbers))
 
 for number in computer_set:
@@ -50,14 +53,20 @@ for number in computer_set:
 
 print(f'Computer cards are: ' + ', '.join(c_numbers))
 
+time.sleep(2)
+
 
 def print_statement():
     print(f'\nYour score is {user_score}')
     print(f'Your opponent score is {computer_score}\n')
 
 
+time.sleep(2)
+
+
 def final_result():
     print_statement()
+    time.sleep(2)
     if user_score == computer_score:
         return 'Draw!'
     elif user_score > 21:
