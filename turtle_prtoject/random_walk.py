@@ -1,11 +1,20 @@
+import turtle
 from turtle import Turtle, Screen
 import random
 
 my_turtle = Turtle()
 my_turtle.shape('turtle')
 my_turtle.color('green')
-my_colors = ['red', 'green', 'blue', 'yellow', 'purple', 'pink', 'brown', 'orange', 'black', 'grey', 'cyan']
 angels = [0, 90, 180, 270]
+turtle.colormode(255)
+
+
+def random_color():
+    r = random.randrange(0, 255)
+    g = random.randrange(0, 255)
+    b = random.randrange(0, 255)
+    color = (r, g, b)
+    return color
 
 
 def walk():
@@ -16,7 +25,7 @@ def walk():
 
 
 for _ in range(250):
-    my_turtle.color(random.choice(my_colors))
+    my_turtle.color(random_color())
     walk()
 
 screen = Screen()
